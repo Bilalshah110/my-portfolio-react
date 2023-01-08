@@ -1,38 +1,390 @@
-.App {
-  text-align: center;
-}
+/*----------------------------------------COLORS----------------------------------------*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.my-background {
+  background: rgb(0, 0, 0);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*----------------------------------------NAVBAR----------------------------------------*/
+
+.my-nav {
+  background: rgb(25, 25, 25);
+  background: linear-gradient(
+    0deg,
+    rgba(25, 25, 25, 0.9579540434337798) 0%,
+    rgba(10, 10, 10, 1) 70%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-menu {
+  padding-left: 0.5rem;
+  border-left: 0.1rem solid rgba(255, 166, 0, 0);
+  padding-right: 0.75rem;
+}
+
+.nav-menu:hover {
+  color: orange;
+  border-left: 0.1rem solid orange;
+  transition: 0.2s;
+}
+
+.active {
+  color: orange !important;
+  font-weight: bold;
+}
+
+/*----------------------------------------HERO----------------------------------------*/
+
+.hero-mask{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 92vh
+}
+
+.hero-heading {
+  font-weight: normal;
+}
+
+.hero-name-heading {
+  font-size: large;
+  letter-spacing: 0.5rem;
+}
+
+.hero-main-heading {
+  font-size: 3rem;
+  background: #ff8903;
+  background: linear-gradient(to bottom right, #ffa200 30%, #fee064 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-sub-heading {
+  font-size: large;
+  letter-spacing: 0.1rem;
+}
+
+.hero-btn {
+  width: 13rem;
+}
+
+/*--------Responsiveness--------*/
+
+@media (max-width: 804px) {
+  .hero-name-heading {
+    font-size: medium;
   }
-  to {
-    transform: rotate(360deg);
+  .hero-main-heading {
+    font-size: 2.5rem;
+  }
+  .letter-spacing {
+    letter-spacing: 0.15rem;
+  }
+}
+
+/*----------------------------------------SECTIONS----------------------------------------*/
+
+.section-top-padding {
+  padding-top: 4rem;
+}
+
+.section-heading {
+  font-family: "bebas neue";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 165, 0, 0.754957691694841999) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  color: gainsboro;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: lighter;
+}
+
+/*----------------------------------------ABOUT----------------------------------------*/
+
+.about {
+  align-items: center;
+}
+.about-img {
+  display: inline-block;
+  border: 0.2rem solid orange;
+  border-radius: 50%;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.about-text {
+  font-family: "montserrat";
+  font-size: 1.07rem;
+  line-height: 1.7rem;
+}
+
+.about-btn {
+  text-decoration: none;
+  color: orange;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.14rem solid orange;
+  transition: 0.2s;
+}
+.about-btn:hover {
+  color: rgb(225, 225, 225);
+  border-bottom: 0.14rem solid rgb(225, 225, 225);
+  transition: 0.2s;
+}
+
+/*--------Responsiveness--------*/
+
+@media (max-width: 992px) {
+  .about {
+    text-align: center;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .about-img {
+    width: 80%;
+  }
+}
+
+/*-------------------------------SKILLS & SERVICES CARDS-------------------------------*/
+
+.my-card {
+  cursor: pointer;
+}
+
+.my-card-body {
+  border-bottom: 0.2rem solid white;
+  color: gainsboro;
+  background: rgb(20, 20, 20);
+  min-height: 13.5rem;
+}
+
+.my-card:hover .my-card-icons {
+  color: white;
+  background: orange;
+  transition: 0.2s;
+}
+.my-card:hover .my-card-body {
+  border-bottom: 0.2rem solid orange;
+  transition: 0.1s;
+  color: white;
+}
+
+.my-card-icons {
+  display: inline-block;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  padding: 0.25rem 0.8rem 0.5rem;
+  border-radius: 50%;
+}
+
+.my-expertise {
+  background: black;
+  border-radius: 2%;
+}
+
+/*----------------------------------------PROJECTS----------------------------------------*/
+
+.card,
+.card-img,
+.card-img-overlay {
+  border-radius: 1%;
+  border: none;
+}
+
+#card-img-overlay {
+  padding: 0;
+  height: 100%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 0.25rem solid rgb(125, 125, 125);
+  transition: 0.2s;
+}
+#card-img-overlay:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 0.25rem solid orange;
+  transition: 0.2s;
+}
+
+.source-code {
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.source-code:hover {
+  color: rgb(185, 185, 185) !important;
+  transition: 0.2s;
+}
+
+/*----------------------------------------CONTACT FORM----------------------------------------*/
+
+.form-inputs {
+  border: none;
+  border-bottom: 0.1rem solid white;
+  border-radius: 0%;
+}
+
+.form-inputs:focus {
+  color: white;
+  background-color: rgba(104, 104, 104, 0);
+  border-color: orange;
+  box-shadow: none;
+}
+
+.validation-error {
+  font-size: 0.8rem;
+  color: rgb(255, 47, 0);
+  padding: 0.4rem 0 0 1.75rem;
+}
+
+.btn {
+  border-radius: 0.15rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1.5rem rgb(0, 0, 0) inset !important;
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out;
+}
+
+.form-icons {
+  font-size: large;
+  margin-top: 0.25rem;
+}
+
+.email-status-msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.email-status-msg-success {
+  color: rgb(175, 255, 150);
+  background: rgba(174, 255, 150, 0.1);
+  border: 1px solid rgb(175, 255, 150);
+  border-left: 5px solid rgb(175, 255, 150);
+}
+.email-status-msg-error {
+  color: rgb(255, 162, 150);
+  background: rgba(255, 162, 150, 0.1);
+  border: 1px solid rgb(255, 162, 150);
+  border-left: 5px solid rgb(255, 162, 150);
+}
+
+.email-status-icon {
+  cursor: pointer;
+}
+.email-status-icon:hover {
+  color: white;
+}
+
+/*----------------------------------------LOCATION----------------------------------------*/
+
+.my-location {
+  position: relative;
+  padding-bottom: 19.1rem;
+  height: 0;
+  overflow: hidden;
+  border-radius: 1%;
+}
+
+.my-location iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.location-items {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.location-items:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.location-icons {
+  font-size: 1.2rem;
+  color: rgb(234, 0, 0);
+  cursor: pointer;
+}
+
+.location-text {
+  color: gainsboro;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+/*----------------------------------------FOOTER----------------------------------------*/
+
+.footer-links {
+  text-align: center;
+  color: white;
+  margin: 0.4rem;
+  padding: 0.3rem 0.5rem 0.5rem;
+  border: 0.05rem solid white;
+  border-radius: 50%;
+}
+.footer-links:hover {
+  color: orange;
+  border: 0.05rem solid orange;
+  transition: 0.2s;
+}
+
+.upper-footer {
+  background: rgb(20, 20, 20);
+  text-align: center;
+}
+.lower-footer {
+  font-family: "Courier New", Courier, monospace;
+  color: gainsboro;
+  background: rgb(15, 15, 15);
+  font-size: 0.7rem;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*------------------------------------MEDIA @ 480px ------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+  /*----------------------------------------ABOUT----------------------------------------*/
+
+  .about-text {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  /*----------------------------------------LOCATION----------------------------------------*/
+
+  .my-location {
+    padding-bottom: 14rem;
+  }
+
+  .location-icons {
+    font-size: 1.1rem;
+  }
+
+  .location-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+  }
+
+  /*----------------------------------------FOOTER----------------------------------------*/
+
+  .footer-links {
+    font-size: x-small;
+    margin: 0.3rem;
+    padding: 0.2rem 0.35rem 0.35rem;
+    border: 0.05rem solid white;
   }
 }
