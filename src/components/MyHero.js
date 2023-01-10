@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const MyHero = () => {
   return (
-    <div className="pt-5">
+    <div className="pt-5" id="home">
       <div
         style={{
           backgroundImage: "url('images/hero.jpg')",
